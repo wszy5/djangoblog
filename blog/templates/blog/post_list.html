@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for post in posts %}
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="mx-3">
+      <h4>{{post.title}}</h4>
+      <strong>{{post.publish_date}}</strong>
+    </div>
+    {{post.text}}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
